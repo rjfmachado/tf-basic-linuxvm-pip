@@ -6,3 +6,9 @@ Linux VM with:
 - SSH Authentication only
 - Public ip
 - Standard B1s SKU
+- Automatic Updates (reboot 02:00)
+- Microsoft signing key
+- Azure CLI APT Repository
+- Azure CLI
+- Customizable cloud-init
+- Zone support

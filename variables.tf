@@ -29,4 +29,12 @@ variable "storage_type" {
 variable "subnetid" {
 }
 
+variable "cloud-config" {
+  type    = string
+  default = "linux.tpl"
+}
 
+variable "zone" {
+  type    = string
+  default = "1"
+}
