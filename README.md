@@ -13,9 +13,9 @@ Linux VM with:
 - Customizable cloud-init
 - Zone support
 
-> Note: You are required to configure access to this virtual machine with an explicit NSG rule allowing SSH.
-
 ## Usage
+
+> Note: You are required to configure access to this virtual machine with an explicit NSG rule allowing SSH.
 
 ```terraform
 
