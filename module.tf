@@ -15,6 +15,10 @@ data "template_file" "cloudconfig" {
   template = fileexists(var.cloud-config) ? file(var.cloud-config) : file("${path.module}/${var.cloud-config}")
 }
 
+locals {
+  sshpublickey = var.sshkey == "" ? file("~/.ssh/id_rsa.pub") : var.sshkey
+}
+
 data "template_cloudinit_config" "config" {
   gzip          = true
   base64_encode = true
@@ -49,7 +53,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
 
   admin_ssh_key {
     username   = var.adminuser
-    public_key = file("~/.ssh/id_rsa.pub")
+    public_key = locals.sshpublickey
   }
 
   disable_password_authentication = true

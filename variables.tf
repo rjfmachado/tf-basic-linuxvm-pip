@@ -11,6 +11,10 @@ variable "adminuser" {
   default = "ricardma"
 }
 
+variable "sshkey" {
+  type = string
+}
+
 variable "location" {
   type    = string
   default = "West Europe"
