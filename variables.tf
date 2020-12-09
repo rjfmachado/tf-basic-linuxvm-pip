@@ -12,7 +12,8 @@ variable "adminuser" {
 }
 
 variable "sshkey" {
-  type = string
+  type    = string
+  default = ""
 }
 
 variable "location" {
